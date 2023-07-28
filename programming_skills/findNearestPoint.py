@@ -15,7 +15,7 @@ points[i].length == 2
 
 class Solution:
     def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:
-        manhDis = 10000
+        manhDis = 10001
         min_index = -1
         for i, p in enumerate(points):
             if (x == p[0]) or (y == p[1]):
