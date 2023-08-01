@@ -21,9 +21,11 @@ class Solution:
 
         stack_arr.append(root)
         while (len(stack_arr) > 0):
-            node = stack_arr.pop(0)
+            node = stack_arr.pop()
             output_arr.append(node.val)
+            # reverse list to go from left to right
             node.children.reverse()
             for n in node.children:
-                stack_arr.insert(0, n)
+                # add to the top of the stack
+                stack_arr.append(n)
         return output_arr
